@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Creating a development smtpd with python"
+title:  "Running SMTP server in development environment with python"
 date:   2020-09-01 18:02:29 +0100
 categories: python smtp
 ---
-If you need a SMTP server to test your code is sending the email correctly, you only need the python.
+
+Sometimes we need to test a code responsible for send emails, to not wast your time looking for some alternative to test your code, you only need the python.
 
 The [python standard library](https://docs.python.org/3/library/index.html) has a lot of useful things, like the [smtpd](https://docs.python.org/3/library/smtpd.html) that allow us to run a simple [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server on our own machine in seconds.
 
@@ -19,6 +20,57 @@ You'll see something like this:
 DebuggingServer started at Tue Sep  1 18:10:46 2020
 	Local addr: ('localhost', 2500)
 	Remote addr:('localhost', 25)
+{% endhighlight %}
+
+You can test with your code or using the classic telnet:
+
+{% highlight shell %}
+$ telnet 192.168.0.145 2500
+Trying 192.168.0.145...
+Connected to 192.168.0.145.
+Escape character is '^]'.
+220 y740 Python SMTP proxy version 0.3
+HELO demo.example.com
+250 y740
+mail from: user@example.com
+250 OK
+rcpt to: another.user@example.com           
+250 OK
+data
+354 End data with <CR><LF>.<CR><LF>
+Hey 
+This is my test email
+
+Thanks
+.
+250 OK
+quit
+221 Bye
+Connection closed by foreign host.
+{% endhighlight %}
+
+On the smtpd terminal you will see something like that:
+
+{% highlight shell %}
+Incoming connection from ('192.168.0.145', 42860)
+Peer: ('192.168.0.145', 42860)
+Data: b'HELO demo.example.com'
+Data: b'mail from: user@example.com'
+===> MAIL from: user@example.com
+sender: user@example.com
+Data: b'rcpt to: another.user@example.com'
+===> RCPT to: another.user@example.com
+recips: ['another.user@example.com']
+Data: b'data'
+Data: b'Hey\r\nThis is my test email\r\n\r\nThanks'
+---------- MESSAGE FOLLOWS ----------
+b'Hey'
+b'This is my test email'
+b'X-Peer: 192.168.0.145'
+b''
+b'Thanks'
+------------ END MESSAGE ------------
+Data: b'quit'
 {% endhighlight %}
 
 

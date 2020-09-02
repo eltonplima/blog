@@ -3,6 +3,7 @@ layout: post
 title:  "Running SMTP server in development environment with python"
 date:   2020-09-01 18:02:29 +0100
 categories: python smtp
+comments: true
 ---
 
 Sometimes we need to test a code responsible for send emails, did you know that's possible to create your own email server with a single command? And all do you need is the python.
@@ -73,6 +74,23 @@ b'Thanks'
 Data: b'quit'
 {% endhighlight %}
 
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+let disqus_config = function () {
+    this.page.url = 'https://blog.eltonplima.dev';
+    this.page.identifier = '3bc69473-580d-4e91-9f1b-9f0b77843ae1';
+};
+
+(function() {
+    let d = document, s = d.createElement('script');
+    s.src = 'https://blog-eltonlima-dev.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll

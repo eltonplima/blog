@@ -3,6 +3,8 @@ layout: default
 ---
 <p>{{ page.date }} - Written by {{ page.author }}</p>
 
+{% include gtm_body.liquid %}
+
 {{ content }}
 
 {% if page.comments %}

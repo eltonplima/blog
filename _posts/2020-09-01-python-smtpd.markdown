@@ -5,7 +5,7 @@ date:   2020-09-01 18:02:29 +0100
 categories: python smtp
 ---
 
-Sometimes we need to test a code responsible for send emails, to not wast your time looking for some alternative to test your code, you only need the python.
+Sometimes we need to test a code responsible for send emails, did you know that's possible to create your own email server with a single command? And all do you need is the python.
 
 The [python standard library](https://docs.python.org/3/library/index.html) has a lot of useful things, like the [smtpd](https://docs.python.org/3/library/smtpd.html) that allow us to run a simple [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol) server on our own machine in seconds.
 
@@ -22,7 +22,7 @@ DebuggingServer started at Tue Sep  1 18:10:46 2020
 	Remote addr:('localhost', 25)
 {% endhighlight %}
 
-You can test with your code or using the classic telnet:
+You can test with your code or using telnet:
 
 {% highlight shell %}
 $ telnet 192.168.0.145 2500
@@ -34,7 +34,7 @@ HELO demo.example.com
 250 y740
 mail from: user@example.com
 250 OK
-rcpt to: another.user@example.com           
+rcpt to: another.user@example.com
 250 OK
 data
 354 End data with <CR><LF>.<CR><LF>

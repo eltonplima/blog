@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Running SMTP server in development environment with python"
 date:   2020-09-01 18:02:29 +0100
 categories: python smtp

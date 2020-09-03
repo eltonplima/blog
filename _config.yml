@@ -40,7 +40,12 @@ defaults:
       type: "posts"
     values:
       comments: true
-
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+google_analytics: UA-177235595-1
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -2,6 +2,7 @@
 title:  "Running SMTP server in development environment with python"
 date:   2020-09-01 18:02:29 +0100
 categories: python smtp
+layout: post
 ---
 
 Sometimes we need to test a code responsible for send emails, did you know that's possible to create your own email server with a single command? And all do you need is the python.

@@ -27,6 +27,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.eltonplima.dev" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: eltonplima
 github_username:  eltonplima
+author:
+  name: Elton Lima
+  email: me@eltonplima.dev
 disqus:
   shortname: blog-eltonlima-dev
 # Build settings
@@ -46,6 +49,10 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
 google_analytics: UA-177235595-1
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -12,4 +12,4 @@ improve my code maintainability
 
 * [Pytest good integration practices](https://docs.pytest.org/en/stable/goodpractices.html)
 
-* [Python packing](https://blog.ionelmc.ro/2014/05/25/python-packaging/#the-structure)
+* [Python packing](https://blog.ionelmc.ro/2014/05/25/python-packaging)

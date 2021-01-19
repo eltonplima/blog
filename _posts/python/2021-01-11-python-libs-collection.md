@@ -9,3 +9,4 @@ layout: post
 * [httpretty](https://httpretty.readthedocs.io/en/latest/index.html)
 * [click](https://click.palletsprojects.com/en/7.x/quickstart/)
 * [pydantic](https://pydantic-docs.helpmanual.io/)
+* [pendulum](https://pendulum.eustace.io/)

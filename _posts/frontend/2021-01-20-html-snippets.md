@@ -1,7 +1,7 @@
 ---
 title:  "Frontend snippets and tips"
 date:   2021-01-20 16:15:21 +0100
-categories: git
+categories: frontent
 layout: post
 ---
 

@@ -9,11 +9,13 @@ layout: post
 
 ## Formatters
 
-### HTML
+### Frontend
 
-* [html tidy](http://www.html-tidy.org/)
+* [js-beautify](https://github.com/beautify-web/js-beautify) for HTML, CSS and JS
 
-### Python
+### Backend
+
+#### Python
 
 * [black](https://github.com/psf/black)
 

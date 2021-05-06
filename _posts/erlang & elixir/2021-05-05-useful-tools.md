@@ -7,6 +7,10 @@ layout: post
 
 # Useful tools and commands
 
+## erlang.mk
+
+erlang.mk is [a build tool for Erlang that just works](https://erlang.mk/guide/getting_started.html)
+
 ## perf
 ```shell
 apt-get install linux-tools-common linux-tools-generic linux-tools-`uname -r`

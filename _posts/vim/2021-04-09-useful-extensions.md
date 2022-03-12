@@ -15,4 +15,9 @@ layout: post
     Plug 'tyru/open-browser.vim'
     Plug 'weirongxu/plantuml-previewer.vim'
     ```
+* [nightfly](https://github.com/bluz71/vim-nightfly-guicolors)
+* [colorize.lua](https://github.com/norcalli/nvim-colorizer.lua)
+* [telescope](https://github.com/nvim-telescope/telescope.nvim)
+* [bat](https://github.com/sharkdp/bat)
+* [git integration](https://www.chrisatmachine.com/Neovim/12-git-integration/)
 

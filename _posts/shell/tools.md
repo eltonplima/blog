@@ -9,3 +9,4 @@ layout: post
 
 * [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
 * [fastmod](https://github.com/facebookincubator/fastmod)
+* [lazygit](https://github.com/jesseduffield/lazygit)

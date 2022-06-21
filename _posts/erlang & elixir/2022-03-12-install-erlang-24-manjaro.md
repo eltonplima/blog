@@ -5,7 +5,9 @@ categories: Erlang and Elixir
 layout: post
 ---
 
-If you try to install erlang 24 with asdf on Manjaro and receives a message like this one:
+# The problem
+
+I was trying to install erlang 24 with asdf on Manjaro and saw the following warning.
 
 ```shell
 APPLICATIONS INFORMATION (See: /home/eltonplima/.asdf/plugins/erlang/kerl-home/builds/asdf_24.3/otp_build_24.3.log)
@@ -18,6 +20,7 @@ APPLICATIONS INFORMATION (See: /home/eltonplima/.asdf/plugins/erlang/kerl-home/b
  *         wxWidgets version is 3.0.2 or above.
 ```
 
-you need to install the `wxgtk2-dev` with the following command:
+# The solution
 
-`pamac build wxgtk2-dev`
+1. Install base-devel `sudo pacman -Syu base-devel`
+2. Install `wxgtk3-dev` with `pamac install wxgtk3-dev`
